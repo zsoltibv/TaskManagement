@@ -7,10 +7,12 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TaskPanel">
-    <Border BorderBrush="Gray" BorderThickness="1">
-        <Grid>
-            <Label Content="Task Panel" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="186"/>
 
-        </Grid>
-    </Border>
+    <Grid>
+        <Border Background="White" BorderBrush="Gray" BorderThickness="1" Margin="0,29,0,0">
+            <Label Content="Task Panel" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="186"/>
+        </Border>
+        <Label Content="Viewing to-do-list 1" HorizontalAlignment="Left" Margin="0,-2,0,0" VerticalAlignment="Top" Width="183"/>
+    </Grid>
+
 </Page>

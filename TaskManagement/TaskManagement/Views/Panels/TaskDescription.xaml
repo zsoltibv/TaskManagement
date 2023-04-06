@@ -9,11 +9,10 @@
       Title="TaskDescription">
 
     <Grid>
-        <Border BorderBrush="Gray" BorderThickness="1">
-            <Grid>
-                <Label Content="Task Description" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="186"/>
+        <Border Background="White" BorderBrush="Gray" BorderThickness="1" Margin="0,39,0,0">
+            <Label Content="Task Description" HorizontalAlignment="Left" Margin="9,9,0,0" VerticalAlignment="Top" Width="186"/>
 
-            </Grid>
         </Border>
+        <Label Content="Selected task's notes and attachments" HorizontalAlignment="Left" VerticalAlignment="Top" Width="213"/>
     </Grid>
 </Page>
