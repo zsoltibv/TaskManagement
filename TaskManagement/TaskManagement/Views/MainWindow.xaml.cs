@@ -24,5 +24,30 @@ namespace TaskManagement
         {
             InitializeComponent();
         }
+
+        private void Frame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
+
+        private void Frame_Navigated_1(object sender, NavigationEventArgs e)
+        {
+
+        }
+
+        private void Frame_Navigated_2(object sender, NavigationEventArgs e)
+        {
+
+        }
+
+        private void Frame_Navigated_3(object sender, NavigationEventArgs e)
+        {
+
+        }
+
+        private void Frame_Navigated_4(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }

@@ -7,7 +7,33 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\Panels\StatisticsPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Panels\TaskDescription.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Panels\TaskPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Panels\TreeViewPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Panels\StatisticsPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Panels\TaskDescription.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Panels\TaskPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Panels\TreeViewPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -3,10 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TaskManagement"
+        xmlns:local="clr-namespace:TaskManagement.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="720" Width="1280">
+    <Window.DataContext>
+        <local:TaskViewModel />
+    </Window.DataContext>
     <Grid>
-
+        <Frame Source="Panels\TaskPanel.xaml" Margin="263,24,10,286" Navigated="Frame_Navigated_1"/>
+        <Frame Source="Panels\TreeViewPanel.xaml" Margin="10,24,1017,184" Navigated="Frame_Navigated_2"/>
+        <Frame Source="Panels\StatisticsPanel.xaml" Margin="10,520,1017,10" Navigated="Frame_Navigated_3"/>
+        <Frame Source="Panels\TaskDescription.xaml" Margin="263,418,10,10" Navigated="Frame_Navigated_4"/>
     </Grid>
 </Window>

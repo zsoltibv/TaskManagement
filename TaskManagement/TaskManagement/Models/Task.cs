@@ -4,33 +4,22 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TaskManagement.Models;
 
 namespace TaskManagement.Models
 {
-    enum Status
+    class Task : BaseNotification
     {
-        Created, 
-        InProgress,
-        Done
-    }
-
-    enum Priority
-    {
-        High,
-        Medium, 
-        Low
-    }
-
-    enum Category
-    {
-        Home, 
-        School,
-        Work
-    }
-
-    class Task
-    {
-        public string Name{ get; set; }
+        private string name;
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+                name = value;
+                NotifyPropertyChanged("name");
+            }
+        }
 
         public string Description { get;set;}
 
@@ -56,5 +45,25 @@ namespace TaskManagement.Models
             EndDate = endDate;
             Category = category;
         }
+    }
+    enum Status
+    {
+        Created,
+        InProgress,
+        Done
+    }
+
+    enum Priority
+    {
+        High,
+        Medium,
+        Low
+    }
+
+    enum Category
+    {
+        Home,
+        School,
+        Work
     }
 }
