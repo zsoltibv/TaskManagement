@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TaskManagement.Models;
+using TaskManagement.ViewModels;
 
 namespace TaskManagement.Views.Panels
 {
@@ -23,6 +25,20 @@ namespace TaskManagement.Views.Panels
         public TaskPanel()
         {
             InitializeComponent();
+        }
+
+        private void OnTaskClick(object sender, SelectionChangedEventArgs e)
+        {
+            // get the selected item
+            TaskElement? selectedTask = taskListView.SelectedItem as TaskElement;
+
+            // check if a task was selected
+            if (selectedTask != null)
+            {
+                // navigate to the other page and pass the text as a parameter
+                TaskDescriptionPanel panel4 = (TaskDescriptionPanel)((MainWindow)Application.Current.MainWindow).Panel4.Content;
+                panel4.SetDescription(selectedTask.Description);
+            }
         }
     }
 }

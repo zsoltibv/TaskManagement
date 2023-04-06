@@ -3,16 +3,35 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:TaskManagement.Views.Panels"
+      xmlns:local="clr-namespace:TaskManagement.ViewModels"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TaskPanel">
+    <Page.DataContext>
+        <local:TaskViewModel />
+    </Page.DataContext>
 
-    <Grid>
-        <Border Background="White" BorderBrush="Gray" BorderThickness="1" Margin="0,29,0,0">
-            <Label Content="Task Panel" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="186"/>
-        </Border>
+    <Grid Name="Container">
         <Label Content="Viewing to-do-list 1" HorizontalAlignment="Left" Margin="0,-2,0,0" VerticalAlignment="Top" Width="183"/>
+        <Grid Name="ListContainer" Background="White" Margin="0,29,0,0">
+            <Label Content="Task Panel" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="186"/>
+            <ListView x:Name="taskListView" ItemsSource="{Binding AllTasks}" SelectionChanged="OnTaskClick">
+                <ListView.View>
+                    <GridView>
+                        <GridView.ColumnHeaderContainerStyle>
+                            <Style TargetType="{x:Type GridViewColumnHeader}">
+                                <Setter Property="MinWidth" Value="80"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Left" />
+                            </Style>
+                        </GridView.ColumnHeaderContainerStyle>
+                        <GridViewColumn Header="Task Name" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Priority" DisplayMemberBinding="{Binding Priority}" />
+                        <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Category}" />
+                        <GridViewColumn Header="Due Date" DisplayMemberBinding="{Binding Deadline, StringFormat={}{0:yyyy/MM/dd}}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
     </Grid>
 
 </Page>

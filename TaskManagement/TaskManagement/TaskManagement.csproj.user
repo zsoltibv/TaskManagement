@@ -10,7 +10,7 @@
     <Compile Update="Views\Panels\StatisticsPanel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Panels\TaskDescription.xaml.cs">
+    <Compile Update="Views\Panels\TaskDescriptionPanel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Panels\TaskPanel.xaml.cs">
@@ -27,7 +27,7 @@
     <Page Update="Views\Panels\StatisticsPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Panels\TaskDescription.xaml">
+    <Page Update="Views\Panels\TaskDescriptionPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Panels\TaskPanel.xaml">

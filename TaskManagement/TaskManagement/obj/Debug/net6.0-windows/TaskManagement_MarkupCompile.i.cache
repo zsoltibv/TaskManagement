@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\
+C:\Users\zsolti\Desktop\Facultate\An2\Semestrul2\MVP\Teme\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\
 TaskManagement
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\App.xaml
-5-849390157
+C:\Users\zsolti\Desktop\Facultate\An2\Semestrul2\MVP\Teme\TaskManagement\TaskManagement\TaskManagement\App.xaml
+5-747133825
 
-131847920036
+13-1333273900
 194101785492
-Views\MainWindow.xaml;Views\Panels\StatisticsPanel.xaml;Views\Panels\TaskDescription.xaml;Views\Panels\TaskPanel.xaml;Views\Panels\TreeViewPanel.xaml;
+Views\MainWindow.xaml;Views\Panels\StatisticsPanel.xaml;Views\Panels\TaskDescriptionPanel.xaml;Views\Panels\TaskPanel.xaml;Views\Panels\TreeViewPanel.xaml;
 
-True
+False
 
