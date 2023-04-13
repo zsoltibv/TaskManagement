@@ -7,12 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="1000">
     <Window.DataContext>
-        <local:TaskViewModel />
+        <local:TaskVM />
     </Window.DataContext>
+    <!--<Window.Resources>
+        <local:TaskViewModel x:Key="dataCtx"/>
+    </Window.Resources>-->
     <Grid Background="#d4d4d8">
-        <Frame Name="Panel1"  Source="Panels\TaskPanel.xaml" Margin="263,24,10,362" Navigated="Frame_Navigated_1"/>
-        <Frame Name="Panel2" Source="Panels\TreeViewPanel.xaml" Margin="15,24,737,184" Navigated="Frame_Navigated_2"/>
-        <Frame Name="Panel3" Source="Panels\StatisticsPanel.xaml" Margin="15,455,737,10" Navigated="Frame_Navigated_3"/>
-        <Frame Name="Panel4" Source="Panels\TaskDescriptionPanel.xaml" Margin="263,272,10,10" Navigated="Frame_Navigated_4"/>
+        <Frame x:Name="Panel1" Source="Panels\TaskPanel.xaml" Margin="263,24,10,362" Navigated="Frame_Navigated_1"/>
+        <Frame x:Name="Panel2" Source="Panels\TreeViewPanel.xaml"  Margin="15,24,737,184" Navigated="Frame_Navigated_2"/>
+        <Frame x:Name="Panel3" Source="Panels\StatisticsPanel.xaml" Margin="15,455,737,10" Navigated="Frame_Navigated_3"/>
+        <Frame x:Name="Panel4" Source="Panels\TaskDescriptionPanel.xaml" Margin="263,272,10,10" Navigated="Frame_Navigated_4"/>
     </Grid>
 </Window>

@@ -22,9 +22,10 @@ namespace TaskManagement.Views.Panels
     /// </summary>
     public partial class TaskPanel : Page
     {
-        public TaskPanel()
+        public TaskPanel(TaskVM tvm)
         {
             InitializeComponent();
+            DataContext = tvm;
         }
 
         private void OnTaskClick(object sender, SelectionChangedEventArgs e)
@@ -36,8 +37,9 @@ namespace TaskManagement.Views.Panels
             if (selectedTask != null)
             {
                 // navigate to the other page and pass the text as a parameter
-                TaskDescriptionPanel panel4 = (TaskDescriptionPanel)((MainWindow)Application.Current.MainWindow).Panel4.Content;
-                panel4.SetDescription(selectedTask.Description);
+                //TaskDescriptionPanel panel4 = (TaskDescriptionPanel)((MainWindow)Application.Current.MainWindow).Panel4.Content;
+                //panel4.SetDescription(selectedTask.Description);
+                (DataContext as TaskVM).SelectedTaskDescription = selectedTask.Description;
             }
         }
     }

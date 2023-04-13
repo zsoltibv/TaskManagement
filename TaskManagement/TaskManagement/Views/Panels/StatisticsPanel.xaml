@@ -11,7 +11,7 @@
 
     <Grid Background="White">
         <Grid>
-            <Label Content="TreeView Panel" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="186"/>
+            <Label Content="Statistics Panel" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="186"/>
         </Grid>
     </Grid>
 </Page>

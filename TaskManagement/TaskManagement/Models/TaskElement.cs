@@ -8,7 +8,7 @@ using TaskManagement.Models;
 
 namespace TaskManagement.Models
 {
-    class TaskElement : BaseNotification
+    public class TaskElement : BaseNotification
     {
         private string _name = "";
         public string Name
@@ -46,21 +46,21 @@ namespace TaskManagement.Models
             Category = category;
         }
     }
-    enum Status
+    public enum Status
     {
         Created,
         InProgress,
         Done
     }
 
-    enum Priority
+    public enum Priority
     {
         High,
         Medium,
         Low
     }
 
-    enum Category
+    public enum Category
     {
         Home,
         School,

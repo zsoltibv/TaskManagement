@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TaskManagement.ViewModels;
+using TaskManagement.Views.Panels;
 
 namespace TaskManagement
 {
@@ -24,16 +25,15 @@ namespace TaskManagement
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Frame_Navigated(object sender, NavigationEventArgs e)
-        {
-
+            Panel1.Navigate(new TaskPanel(DataContext as TaskVM));
+            Panel2.Navigate(new TreeViewPanel());
+            Panel3.Navigate(new StatisticsPanel(DataContext as TaskVM));
+            Panel4.Navigate(new TaskDescriptionPanel(DataContext as TaskVM));
         }
 
         private void Frame_Navigated_1(object sender, NavigationEventArgs e)
         {
-
+            
         }
 
         private void Frame_Navigated_2(object sender, NavigationEventArgs e)

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TaskManagement.ViewModels;
 
 namespace TaskManagement.Views.Panels
 {
@@ -20,9 +21,10 @@ namespace TaskManagement.Views.Panels
     /// </summary>
     public partial class TaskDescriptionPanel : Page
     {
-        public TaskDescriptionPanel()
+        public TaskDescriptionPanel(TaskVM tvm)
         {
             InitializeComponent();
+            DataContext = tvm;
         }
 
         public void SetDescription(string taskDescription)

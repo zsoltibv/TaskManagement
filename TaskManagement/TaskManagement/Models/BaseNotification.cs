@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TaskManagement.Models
 {
-    class BaseNotification : INotifyPropertyChanged
+    public class BaseNotification : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected void NotifyPropertyChanged(string propertyName)
