@@ -9,10 +9,43 @@
     <Window.DataContext>
         <local:TaskVM />
     </Window.DataContext>
-    <!--<Window.Resources>
-        <local:TaskViewModel x:Key="dataCtx"/>
-    </Window.Resources>-->
     <Grid Background="#d4d4d8">
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="Open Database"/>
+                <MenuItem Header="New Database"/>
+                <MenuItem Header="Archive Database"/>
+                <Separator/>
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="TDL">
+                <MenuItem Header="Add root TDL"/>
+                <MenuItem Header="Add Sub-TDL"/>
+                <MenuItem Header="Edit"/>
+                <MenuItem Header="Delete"/>
+                <MenuItem Header="Move Up"/>
+                <MenuItem Header="Move Down"/>
+                <MenuItem Header="Change Path"/>
+            </MenuItem>
+            <MenuItem Header="Task">
+                <MenuItem Header="Add"/>
+                <MenuItem Header="Edit"/>
+                <MenuItem Header="Delete"/>
+                <MenuItem Header="Set Done"/>
+                <MenuItem Header="Move Up"/>
+                <MenuItem Header="Move Down"/>
+                <MenuItem Header="Manage Category"/>
+                <MenuItem Header="Find Task"/>
+            </MenuItem>
+            <MenuItem Header="View">
+                <MenuItem Header="Sort"/>
+                <MenuItem Header="Filter"/>
+                <MenuItem Header="Statistics"/>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="About"/>
+            </MenuItem>
+        </Menu>
         <Frame x:Name="Panel1" Source="Panels\TaskPanel.xaml" Margin="263,24,10,362" Navigated="Frame_Navigated_1"/>
         <Frame x:Name="Panel2" Source="Panels\TreeViewPanel.xaml"  Margin="15,24,737,184" Navigated="Frame_Navigated_2"/>
         <Frame x:Name="Panel3" Source="Panels\StatisticsPanel.xaml" Margin="15,455,737,10" Navigated="Frame_Navigated_3"/>
