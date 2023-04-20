@@ -9,11 +9,11 @@ using TaskManagement.Views.TDL;
 
 namespace TaskManagement.Services
 {
-    public class TDLOperations
+    public class TreeViewHelper
     {
         private ObservableCollection<TreeViewElement> items { get; set; }
 
-        public TDLOperations(ObservableCollection<TreeViewElement> items) {
+        public TreeViewHelper(ObservableCollection<TreeViewElement> items) {
             this.items = items;
         }
 

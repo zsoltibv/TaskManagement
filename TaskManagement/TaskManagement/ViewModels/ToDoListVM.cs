@@ -12,28 +12,13 @@ using System.Collections.ObjectModel;
 
 namespace TaskManagement.ViewModels
 {
-    public class ToDoListVM
+    public class ToDoListVM : BaseNotification
     {
-        private TDLOperations tdl;
-        public ObservableCollection<TreeViewElement> ItemsCollection { get; set; }
-
+        public TreeViewVM TreeViewVM { get; set; }
+        
         public ToDoListVM()
         {
-            ItemsCollection = new ObservableCollection<TreeViewElement>();
-            tdl = new TDLOperations(ItemsCollection);
-        }
-
-        private ICommand addRootTDLCommand;
-        public ICommand AddRootTDLCommand
-        {
-            get
-            {
-                if (addRootTDLCommand == null)
-                {
-                    addRootTDLCommand = new RelayCommand<TreeViewElement>(tdl.ShowAddTdlDialog);
-                }
-                return addRootTDLCommand;
-            }
+            TreeViewVM = new TreeViewVM();
         }
     }
 }

@@ -22,10 +22,10 @@ namespace TaskManagement.Views.Panels
     /// </summary>
     public partial class TaskPanel : Page
     {
-        public TaskPanel(ToDoListVM tvm)
+        public TaskPanel(ToDoListVM dataContext)
         {
             InitializeComponent();
-            DataContext = tvm;
+            DataContext = dataContext;
         }
 
         private void OnTaskClick(object sender, SelectionChangedEventArgs e)

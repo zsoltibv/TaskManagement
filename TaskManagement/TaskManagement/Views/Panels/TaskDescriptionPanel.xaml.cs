@@ -21,10 +21,10 @@ namespace TaskManagement.Views.Panels
     /// </summary>
     public partial class TaskDescriptionPanel : Page
     {
-        public TaskDescriptionPanel(ToDoListVM tvm)
+        public TaskDescriptionPanel(ToDoListVM dataContext)
         {
             InitializeComponent();
-            DataContext = tvm;
+            DataContext = dataContext;
         }
 
         public void SetDescription(string taskDescription)

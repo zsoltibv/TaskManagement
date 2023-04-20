@@ -20,8 +20,8 @@ namespace TaskManagement.Views.TDL
     /// </summary>
     public partial class AddRootTDL : Window
     {
-        TDLOperations tdl;
-        public AddRootTDL(TDLOperations tdl)
+        TreeViewHelper tdl;
+        public AddRootTDL(TreeViewHelper tdl)
         {
             InitializeComponent();
             this.tdl = tdl;

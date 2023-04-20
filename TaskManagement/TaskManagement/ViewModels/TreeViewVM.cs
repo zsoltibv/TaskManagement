@@ -14,8 +14,9 @@ namespace TaskManagement.ViewModels
 {
     public class TreeViewVM : BaseNotification
     {
-        TDLOperations tdl;
-        public ObservableCollection<TreeViewElement> items { get; set; }
+        TreeViewHelper tdl;
+        public ObservableCollection<TreeViewElement> ItemsCollection { get; set; }
+
         private TreeViewElement selectedItem;
         public TreeViewElement SelectedItem
         {
@@ -29,9 +30,23 @@ namespace TaskManagement.ViewModels
                 NotifyPropertyChanged("SelectedItem");
             }
         }
-        public TreeViewVM(TDLOperations tdl)
+        public TreeViewVM()
         {
-            this.tdl = tdl;
+            ItemsCollection = new ObservableCollection<TreeViewElement>();
+            tdl = new TreeViewHelper(ItemsCollection);
+        }
+
+        private ICommand addRootTDLCommand;
+        public ICommand AddRootTDLCommand
+        {
+            get
+            {
+                if (addRootTDLCommand == null)
+                {
+                    addRootTDLCommand = new RelayCommand<TreeViewElement>(tdl.ShowAddTdlDialog);
+                }
+                return addRootTDLCommand;
+            }
         }
     }
 }
