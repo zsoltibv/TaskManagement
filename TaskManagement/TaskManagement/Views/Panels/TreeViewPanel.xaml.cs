@@ -21,8 +21,9 @@ namespace TaskManagement.Views.Panels
     /// </summary>
     public partial class TreeViewPanel : Page
     {
-        public TreeViewPanel()
+        public TreeViewPanel(ToDoListVM tvm)
         {
+            DataContext = tvm;
             InitializeComponent();
         }
 

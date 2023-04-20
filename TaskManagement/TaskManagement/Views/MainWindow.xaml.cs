@@ -25,10 +25,10 @@ namespace TaskManagement
         public MainWindow()
         {
             InitializeComponent();
-            Panel1.Navigate(new TaskPanel(DataContext as TaskVM));
-            Panel2.Navigate(new TreeViewPanel());
-            Panel3.Navigate(new StatisticsPanel(DataContext as TaskVM));
-            Panel4.Navigate(new TaskDescriptionPanel(DataContext as TaskVM));
+            Panel1.Navigate(new TaskPanel(DataContext as ToDoListVM));
+            Panel2.Navigate(new TreeViewPanel(DataContext as ToDoListVM));
+            Panel3.Navigate(new StatisticsPanel(DataContext as ToDoListVM));
+            Panel4.Navigate(new TaskDescriptionPanel(DataContext as ToDoListVM));
         }
 
         private void Frame_Navigated_1(object sender, NavigationEventArgs e)

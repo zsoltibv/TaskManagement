@@ -21,7 +21,7 @@ namespace TaskManagement.Views.Panels
     /// </summary>
     public partial class StatisticsPanel : Page
     {
-        public StatisticsPanel(TaskVM tvm)
+        public StatisticsPanel(ToDoListVM tvm)
         {
             InitializeComponent();
             DataContext = tvm;

@@ -22,7 +22,7 @@ namespace TaskManagement.Views.Panels
     /// </summary>
     public partial class TaskPanel : Page
     {
-        public TaskPanel(TaskVM tvm)
+        public TaskPanel(ToDoListVM tvm)
         {
             InitializeComponent();
             DataContext = tvm;
