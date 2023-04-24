@@ -39,9 +39,7 @@ namespace TaskManagement.Services
 
         public void ShowAddTaskDialog(TreeViewElement element)
         {
-            //change
             this.currentItem = element;
-            //MessageBox.Show(element.ItemName.ToString());
             AddTask addTask = new AddTask(this);
             addTask.ShowDialog();
         }
@@ -65,6 +63,31 @@ namespace TaskManagement.Services
                 {
                     currentItem.SubCollectionTask.Add(new TaskElement(name, description, status, priority, deadLine, endDate, category));
                 }
+            }
+        }
+
+        public void ShowAddSubTdlDialog(TreeViewElement element)
+        {
+            this.currentItem = element;
+            AddSubTDL addSubTDL = new AddSubTDL(this);
+            addSubTDL.ShowDialog();
+        }
+
+        public void AddSubTdl(string name)
+        {
+            if (currentItem == null)
+            {
+                MessageBox.Show("No TDL selected!");
+            }
+            else
+            {
+                currentItem.SubCollectionTDL = new ObservableCollection<TreeViewElement>()
+                {
+                    new TreeViewElement()
+                    {
+                        ItemName = name,
+                    }
+                };
             }
         }
     }

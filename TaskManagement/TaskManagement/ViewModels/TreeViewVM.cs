@@ -75,5 +75,18 @@ namespace TaskManagement.ViewModels
                 return addTaskCommand;
             }
         }
+
+        private ICommand addSubTDLCommand;
+        public ICommand AddSubTDLCommand
+        {
+            get
+            {
+                if (addSubTDLCommand == null)
+                {
+                    addSubTDLCommand = new RelayCommand<TreeViewElement>(tdl.ShowAddSubTdlDialog);
+                }
+                return addSubTDLCommand;
+            }
+        }
     }
 }

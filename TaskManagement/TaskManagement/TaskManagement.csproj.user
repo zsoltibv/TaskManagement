@@ -25,6 +25,9 @@
     <Compile Update="Views\TDL\AddRootTDL.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\TDL\AddSubTDL.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\MainWindow.xaml">
@@ -46,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\TDL\AddRootTDL.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TDL\AddSubTDL.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

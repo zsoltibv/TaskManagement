@@ -10,7 +10,7 @@
     <Grid Background="White">
         <TreeView x:Name="treeView" ItemsSource="{Binding TreeViewVM.ItemsCollection}" SelectedItemChanged="treeView_SelectedItemChanged">
             <TreeView.ItemTemplate>
-                <HierarchicalDataTemplate ItemsSource="{Binding SubCollection}">
+                <HierarchicalDataTemplate ItemsSource="{Binding SubCollectionTDL}">
                     <TextBlock Text="{Binding ItemName}" FontSize="25"/>
                 </HierarchicalDataTemplate>
             </TreeView.ItemTemplate>
