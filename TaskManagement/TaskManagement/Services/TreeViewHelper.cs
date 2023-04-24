@@ -67,6 +67,31 @@ namespace TaskManagement.Services
             }
         }
 
+        public void ShowAddSubTdlDialog(TreeViewElement element)
+        {
+            this.currentItem = element;
+            AddSubTDL addSubTDL = new AddSubTDL(this);
+            addSubTDL.ShowDialog();
+        }
+
+        public void AddSubTdl(string name)
+        {
+            if (currentItem == null)
+            {
+                MessageBox.Show("No TDL selected!");
+            }
+            else
+            {
+                currentItem.SubCollectionTDL = new ObservableCollection<TreeViewElement>()
+                {
+                    new TreeViewElement()
+                    {
+                        ItemName = name,
+                    }
+                };
+            }
+        }
+
         public void DeleteTask(TaskElement task)
         {
             // find the object you want to delete
@@ -98,28 +123,27 @@ namespace TaskManagement.Services
             }
         }
 
-        public void ShowAddSubTdlDialog(TreeViewElement element)
+        public void DeleteTdl(TreeViewElement element)
         {
-            this.currentItem = element;
-            AddSubTDL addSubTDL = new AddSubTDL(this);
-            addSubTDL.ShowDialog();
-        }
+            TreeViewElement objectToDelete = items.FirstOrDefault(x => x.ItemName == element.ItemName);
 
-        public void AddSubTdl(string name)
-        {
-            if (currentItem == null)
+            if (objectToDelete != null)
             {
-                MessageBox.Show("No TDL selected!");
+                // remove the object from the inner list
+                items.Remove(objectToDelete);
+                return;
             }
-            else
+
+            foreach (var innerList in element.SubCollectionTDL)
             {
-                currentItem.SubCollectionTDL = new ObservableCollection<TreeViewElement>()
+                objectToDelete = innerList.SubCollectionTDL.FirstOrDefault(x => x.ItemName == element.ItemName);
+
+                if (objectToDelete != null)
                 {
-                    new TreeViewElement()
-                    {
-                        ItemName = name,
-                    }
-                };
+                    // remove the object from the inner list
+                    innerList.SubCollectionTDL.Remove(objectToDelete);
+                    break;
+                }
             }
         }
     }

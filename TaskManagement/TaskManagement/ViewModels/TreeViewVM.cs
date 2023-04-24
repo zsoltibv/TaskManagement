@@ -100,5 +100,18 @@ namespace TaskManagement.ViewModels
                 return _addSubTDLCommand;
             }
         }
+
+        private ICommand _deleteTDLCommand;
+        public ICommand DeleteTDLCommand
+        {
+            get
+            {
+                if (_deleteTDLCommand == null)
+                {
+                    _deleteTDLCommand = new RelayCommand<TreeViewElement>(tdl.DeleteTdl);
+                }
+                return _deleteTDLCommand;
+            }
+        }
     }
 }

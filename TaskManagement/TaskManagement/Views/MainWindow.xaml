@@ -22,7 +22,7 @@
                 <MenuItem Header="Add root TDL" Command="{Binding TreeViewVM.AddRootTDLCommand}"/>
                 <MenuItem Header="Add Sub-TDL" Command="{Binding TreeViewVM.AddSubTDLCommand}" CommandParameter="{Binding TreeViewVM.CurrentItem}"/>
                 <MenuItem Header="Edit"/>
-                <MenuItem Header="Delete"/>
+                <MenuItem Header="Delete" Command="{Binding TreeViewVM.DeleteTDLCommand}" CommandParameter="{Binding TreeViewVM.CurrentItem}"/>
                 <MenuItem Header="Move Up"/>
                 <MenuItem Header="Move Down"/>
                 <MenuItem Header="Change Path"/>
