@@ -44,10 +44,10 @@ namespace TaskManagement.Views.Task
             var status = (Enums.Status)comboStatus.SelectedItem;
             var priority = (Enums.Priority)comboPriority.SelectedItem;
             var category = (Enums.Category)comboCategory.SelectedItem;
-            var deadLine = dateDeadline.DisplayDate;
-            var endDate = dateEndDate.DisplayDate;
+            var deadLine = dateDeadline.SelectedDate;
+            var endDate = dateEndDate.SelectedDate;
 
-            tdl.AddTask(name, description, status, priority, category, deadLine, endDate);
+            tdl.AddTask(name, description, status, priority, category, (DateTime)deadLine, (DateTime)endDate);
             this.Close();
         }
     }

@@ -22,9 +22,12 @@
                             </Style>
                         </GridView.ColumnHeaderContainerStyle>
                         <GridViewColumn Header="Task Name" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" />
+                        <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Status}" />
                         <GridViewColumn Header="Priority" DisplayMemberBinding="{Binding Priority}" />
-                        <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Category}" />
-                        <GridViewColumn Header="Due Date" DisplayMemberBinding="{Binding Deadline, StringFormat={}{0:yyyy/MM/dd}}" />
+                        <GridViewColumn Header="Deadline" DisplayMemberBinding="{Binding Deadline, StringFormat={}{0:yyyy/MM/dd}}" />
+                        <GridViewColumn Header="End Date" DisplayMemberBinding="{Binding EndDate, StringFormat={}{0:yyyy/MM/dd}}" />
+                        <GridViewColumn Header="Category" DisplayMemberBinding="{Binding Category}" />
                     </GridView>
                 </ListView.View>
             </ListView>
