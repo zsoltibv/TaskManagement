@@ -37,7 +37,7 @@ namespace TaskManagement.Views.Panels
             if (selectedTask != null)
             {
                 // navigate to the other page and pass the text as a parameter
-                (DataContext as ToDoListVM).TreeViewVM.SelectedTaskDescription = selectedTask.Description;
+                (DataContext as ToDoListVM).TreeViewVM.SelectedTask = selectedTask;
             }
         }
     }

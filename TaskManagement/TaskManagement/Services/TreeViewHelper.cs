@@ -10,6 +10,7 @@ using TaskManagement.Views.Task;
 using static TaskManagement.Models.Enums;
 using System.Windows;
 using TaskManagement.ViewModels;
+using System.Xml.Linq;
 
 namespace TaskManagement.Services
 {
@@ -62,6 +63,37 @@ namespace TaskManagement.Services
                 else
                 {
                     currentItem.SubCollectionTask.Add(new TaskElement(name, description, status, priority, deadLine, endDate, category));
+                }
+            }
+        }
+
+        public void DeleteTask(TaskElement task)
+        {
+            // find the object you want to delete
+            TaskElement objectToDelete = null;
+
+            foreach (var innerList in items)
+            {
+
+                objectToDelete = innerList.SubCollectionTask.FirstOrDefault(x => x.Name == task.Name);
+
+                if (objectToDelete != null)
+                {
+                    // remove the object from the inner list
+                    innerList.SubCollectionTask.Remove(objectToDelete);
+                    break;
+                }
+
+                foreach (var innerList2 in innerList.SubCollectionTDL)
+                {
+                    objectToDelete = innerList2.SubCollectionTask.FirstOrDefault(x => x.Name == task.Name);
+
+                    if (objectToDelete != null)
+                    {
+                        // remove the object from the inner list
+                        innerList2.SubCollectionTask.Remove(objectToDelete);
+                        break;
+                    }
                 }
             }
         }

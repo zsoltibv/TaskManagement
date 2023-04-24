@@ -16,29 +16,29 @@ namespace TaskManagement.ViewModels
     public class TreeViewVM : BaseNotification
     {
         public TreeViewHelper tdl;
-        private string selectedTaskDescription;
-        public string SelectedTaskDescription
+        private TaskElement _selectedTask;
+        public TaskElement SelectedTask
         {
             get
             {
-                return selectedTaskDescription;
+                return _selectedTask;
             }
             set
             {
-                selectedTaskDescription = value;
-                NotifyPropertyChanged("SelectedTaskDescription");
+                _selectedTask = value;
+                NotifyPropertyChanged("SelectedTask");
             }
         }
-        private TreeViewElement currentItem;
+        private TreeViewElement _currentItem;
         public TreeViewElement CurrentItem
         {
             get
             {
-                return currentItem;
+                return _currentItem;
             }
             set
             {
-                currentItem = value;
+                _currentItem = value;
                 NotifyPropertyChanged("CurrentItem");
             }
         }
@@ -50,42 +50,54 @@ namespace TaskManagement.ViewModels
             tdl = new TreeViewHelper(ItemsCollection);
         }
 
-        private ICommand addRootTDLCommand;
+        private ICommand _addRootTDLCommand;
         public ICommand AddRootTDLCommand
         {
             get
             {
-                if (addRootTDLCommand == null)
+                if (_addRootTDLCommand == null)
                 {
-                    addRootTDLCommand = new RelayCommand<TreeViewElement>(tdl.ShowAddTdlDialog);
+                    _addRootTDLCommand = new RelayCommand<TreeViewElement>(tdl.ShowAddTdlDialog);
                 }
-                return addRootTDLCommand;
+                return _addRootTDLCommand;
             }
         }
 
-        private ICommand addTaskCommand;
+        private ICommand _addTaskCommand;
         public ICommand AddTaskCommand
         {
             get
             {
-                if (addTaskCommand == null)
+                if (_addTaskCommand == null)
                 {
-                    addTaskCommand = new RelayCommand<TreeViewElement>(tdl.ShowAddTaskDialog);
+                    _addTaskCommand = new RelayCommand<TreeViewElement>(tdl.ShowAddTaskDialog);
                 }
-                return addTaskCommand;
+                return _addTaskCommand;
+            }
+        }
+        private ICommand _deleteTaskCommand;
+        public ICommand DeleteTaskCommand
+        {
+            get
+            {
+                if (_deleteTaskCommand == null)
+                {
+                    _deleteTaskCommand = new RelayCommand<TaskElement>(tdl.DeleteTask);
+                }
+                return _deleteTaskCommand;
             }
         }
 
-        private ICommand addSubTDLCommand;
+        private ICommand _addSubTDLCommand;
         public ICommand AddSubTDLCommand
         {
             get
             {
-                if (addSubTDLCommand == null)
+                if (_addSubTDLCommand == null)
                 {
-                    addSubTDLCommand = new RelayCommand<TreeViewElement>(tdl.ShowAddSubTdlDialog);
+                    _addSubTDLCommand = new RelayCommand<TreeViewElement>(tdl.ShowAddSubTdlDialog);
                 }
-                return addSubTDLCommand;
+                return _addSubTDLCommand;
             }
         }
     }
