@@ -16,6 +16,19 @@ namespace TaskManagement.ViewModels
     public class TreeViewVM : BaseNotification
     {
         public TreeViewHelper tdl;
+        private string selectedTaskDescription;
+        public string SelectedTaskDescription
+        {
+            get
+            {
+                return selectedTaskDescription;
+            }
+            set
+            {
+                selectedTaskDescription = value;
+                NotifyPropertyChanged("SelectedTaskDescription");
+            }
+        }
         private TreeViewElement currentItem;
         public TreeViewElement CurrentItem
         {

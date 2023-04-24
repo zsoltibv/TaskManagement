@@ -30,18 +30,15 @@ namespace TaskManagement.Views.Panels
 
         private void OnTaskClick(object sender, SelectionChangedEventArgs e)
         {
-            taskListView.Items.Refresh();
-           // get the selected item
-         //   TaskElement? selectedTask = taskListView.SelectedItem as TaskElement;
+            // get the selected item
+            TaskElement? selectedTask = taskListView.SelectedItem as TaskElement;
 
             // check if a task was selected
-          //  if (selectedTask != null)
-          //  {
+            if (selectedTask != null)
+            {
                 // navigate to the other page and pass the text as a parameter
-                //TaskDescriptionPanel panel4 = (TaskDescriptionPanel)((MainWindow)Application.Current.MainWindow).Panel4.Content;
-                //panel4.SetDescription(selectedTask.Description);
-         //       (DataContext as ToDoListVM).TaskVM.SelectedTaskDescription = selectedTask.Description;
-         //   }
+                (DataContext as ToDoListVM).TreeViewVM.SelectedTaskDescription = selectedTask.Description;
+            }
         }
     }
 }
