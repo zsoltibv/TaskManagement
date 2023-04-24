@@ -17,21 +17,74 @@ namespace TaskManagement.Models
             set
             {
                 _name = value;
-                NotifyPropertyChanged("name");
+                NotifyPropertyChanged("Name");
+            }
+        }
+        private string _description = "";
+        public string Description
+        {
+            get { return _description; }
+            set
+            {
+                _description = value;
+                NotifyPropertyChanged("Description");
             }
         }
 
-        public string Description { get; set; } = "";
+        private Enums.Status _status;
+        public Enums.Status Status
+        {
+            get { return _status; }
+            set
+            {
+                _status = value;
+                NotifyPropertyChanged("Status");
+            }
+        }
 
-        public Enums.Status Status { get; set; }
+        private Enums.Priority _priority;
+        public Enums.Priority Priority
+        {
+            get { return _priority; }
+            set
+            {
+                _priority = value;
+                NotifyPropertyChanged("Priority");
+            }
+        }
 
-        public Enums.Priority Priority { get; set; }
+        private DateTime _deadline;
+        public DateTime Deadline
+        {
+            get { return _deadline; }
+            set
+            {
+                _deadline = value;
+                NotifyPropertyChanged("Deadline");
+            }
+        }
 
-        public DateTime Deadline { get; set; }
+        private DateTime _endDate;
+        public DateTime EndDate
+        {
+            get { return _endDate; }
+            set
+            {
+                _endDate = value;
+                NotifyPropertyChanged("EndDate");
+            }
+        }
 
-        public DateTime EndDate { get; set; }
-
-        public Enums.Category Category { get; set; }
+        private Enums.Category _category;
+        public Enums.Category Category
+        {
+            get { return _category; }
+            set
+            {
+                _category = value;
+                NotifyPropertyChanged("Category");
+            }
+        }
 
         public TaskElement() { }
 
