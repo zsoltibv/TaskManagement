@@ -23,19 +23,19 @@ namespace TaskManagement.Models
 
         public string Description { get; set; } = "";
 
-        public Status Status { get; set; }
+        public Enums.Status Status { get; set; }
 
-        public Priority Priority { get; set; }
+        public Enums.Priority Priority { get; set; }
 
         public DateTime Deadline { get; set; }
 
         public DateTime EndDate { get; set; }
 
-        public Category Category { get; set; }
+        public Enums.Category Category { get; set; }
 
         public TaskElement() { }
 
-        public TaskElement(string name, string description, Status status, Priority priority, DateTime deadline, DateTime endDate, Category category)
+        public TaskElement(string name, string description, Enums.Status status, Enums.Priority priority, DateTime deadline, DateTime endDate, Enums.Category category)
         {
             Name = name;
             Description = description;
@@ -45,25 +45,5 @@ namespace TaskManagement.Models
             EndDate = endDate;
             Category = category;
         }
-    }
-    public enum Status
-    {
-        Created,
-        InProgress,
-        Done
-    }
-
-    public enum Priority
-    {
-        High,
-        Medium,
-        Low
-    }
-
-    public enum Category
-    {
-        Home,
-        School,
-        Work
     }
 }

@@ -39,6 +39,7 @@ V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj
 V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\Views\Panels\TaskDescriptionPanel.g.cs
 V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\Views\Panels\TaskPanel.g.cs
 V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\Views\Panels\TreeViewPanel.g.cs
+V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\Views\Task\AddTask.g.cs
 V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\Views\TDL\AddRootTDL.g.cs
 V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\App.g.cs
 V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
@@ -49,6 +50,7 @@ V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj
 V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\Views\Panels\TaskDescriptionPanel.baml
 V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\Views\Panels\TaskPanel.baml
 V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\Views\Panels\TreeViewPanel.baml
+V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\Views\Task\AddTask.baml
 V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\Views\TDL\AddRootTDL.baml
 V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\TaskManagement.g.resources
 V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\TaskManagement.GeneratedMSBuildEditorConfig.editorconfig

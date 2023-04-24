@@ -11,9 +11,11 @@ namespace TaskManagement.Models
     {
         public TreeViewElement()
         {
-            SubCollection = new ObservableCollection<TreeViewElement>();
+            SubCollectionTDL = new ObservableCollection<TreeViewElement>();
+            SubCollectionTask = new ObservableCollection<TaskElement>();
         }
-        public ObservableCollection<TreeViewElement> SubCollection { get; set; }
+        public ObservableCollection<TreeViewElement> SubCollectionTDL { get; set; }
+        public ObservableCollection<TaskElement> SubCollectionTask { get; set; }
         private string itemName;
         public string ItemName
         {

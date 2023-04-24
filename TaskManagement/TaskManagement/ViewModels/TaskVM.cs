@@ -29,8 +29,8 @@ namespace TaskManagement.ViewModels
         {
 
             AllTasks = new ObservableCollection<TaskElement>(){
-                new TaskElement("Task 1", "Description 1", Status.Created,
-                Priority.High, new DateTime(2023, 4, 6), new DateTime(2023, 4, 6), Category.Work)
+                new TaskElement("Task 1", "Description 1", Enums.Status.Created,
+                Enums.Priority.High, new DateTime(2023, 4, 6), new DateTime(2023, 4, 6), Enums.Category.Work)
             };
         }
     }

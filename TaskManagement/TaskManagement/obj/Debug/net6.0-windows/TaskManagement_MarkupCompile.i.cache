@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\App.xaml
-61736984426
+72074832207
 
-18-929608347
+20-65540632
 194101785492
-Views\MainWindow.xaml;Views\Panels\StatisticsPanel.xaml;Views\Panels\TaskDescriptionPanel.xaml;Views\Panels\TaskPanel.xaml;Views\Panels\TreeViewPanel.xaml;Views\TDL\AddRootTDL.xaml;
+Views\MainWindow.xaml;Views\Panels\StatisticsPanel.xaml;Views\Panels\TaskDescriptionPanel.xaml;Views\Panels\TaskPanel.xaml;Views\Panels\TreeViewPanel.xaml;Views\Task\AddTask.xaml;Views\TDL\AddRootTDL.xaml;
 
 True
 

@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TreeViewPanel">
     <Grid Background="White">
-        <TreeView x:Name="treeView" ItemsSource="{Binding TreeViewVM.ItemsCollection}">
+        <TreeView x:Name="treeView" ItemsSource="{Binding TreeViewVM.ItemsCollection}" SelectedItemChanged="treeView_SelectedItemChanged">
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate ItemsSource="{Binding SubCollection}">
                     <TextBlock Text="{Binding ItemName}" FontSize="25"/>

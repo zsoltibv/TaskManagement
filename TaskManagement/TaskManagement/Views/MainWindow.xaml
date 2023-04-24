@@ -28,7 +28,7 @@
                 <MenuItem Header="Change Path"/>
             </MenuItem>
             <MenuItem Header="Task">
-                <MenuItem Header="Add"/>
+                <MenuItem Header="Add" Command="{Binding TreeViewVM.AddTaskCommand}" CommandParameter="{Binding TreeViewVM.CurrentItem}"/>
                 <MenuItem Header="Edit"/>
                 <MenuItem Header="Delete"/>
                 <MenuItem Header="Set Done"/>

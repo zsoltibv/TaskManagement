@@ -19,6 +19,9 @@
     <Compile Update="Views\Panels\TreeViewPanel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Task\AddTask.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\TDL\AddRootTDL.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -37,6 +40,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Panels\TreeViewPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Task\AddTask.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\TDL\AddRootTDL.xaml">

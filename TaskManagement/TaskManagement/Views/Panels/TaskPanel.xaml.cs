@@ -39,7 +39,7 @@ namespace TaskManagement.Views.Panels
                 // navigate to the other page and pass the text as a parameter
                 //TaskDescriptionPanel panel4 = (TaskDescriptionPanel)((MainWindow)Application.Current.MainWindow).Panel4.Content;
                 //panel4.SetDescription(selectedTask.Description);
-                (DataContext as TaskVM).SelectedTaskDescription = selectedTask.Description;
+                (DataContext as ToDoListVM).TaskVM.SelectedTaskDescription = selectedTask.Description;
             }
         }
     }
