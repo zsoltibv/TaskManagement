@@ -12,11 +12,12 @@
     <Grid Background="White">
         <Grid>
             <Label x:Name="tasksDueToday" Content="Tasks due today: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <Label Content="{Binding StatsVM.Stats.TasksDue}" HorizontalAlignment="Left" Margin="110,10,0,0" VerticalAlignment="Top" Height="26" Width="22"/>
             <Label x:Name="tasksDueTommorow" Content="Tasks due tomorrow: " HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
             <Label x:Name="tasksOverdue" Content="Tasks overdue: " HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top"/>
             <Label x:Name="tasksDone" Content="Tasks done: " HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top"/>
             <Label x:Name="tasksToBeDone" Content="Tasks to be done: " HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top"/>
-            <Border BorderBrush="Gray" BorderThickness="1"/>
+            
         </Grid>
     </Grid>
 </Page>

@@ -16,10 +16,13 @@ namespace TaskManagement.ViewModels
     public class ToDoListVM : BaseNotification
     {
         public TreeViewVM TreeViewVM { get; set; }
+
+        public StatsVM StatsVM { get; set; }
         
         public ToDoListVM()
         {
             TreeViewVM = new TreeViewVM();
+            StatsVM = new StatsVM();
         }
     }
 }
