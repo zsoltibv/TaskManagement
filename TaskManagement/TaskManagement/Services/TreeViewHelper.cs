@@ -134,7 +134,7 @@ namespace TaskManagement.Services
                 return;
             }
 
-            foreach (var innerList in element.SubCollectionTDL)
+            foreach (var innerList in items)
             {
                 objectToDelete = innerList.SubCollectionTDL.FirstOrDefault(x => x.ItemName == element.ItemName);
 

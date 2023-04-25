@@ -33,8 +33,8 @@ namespace TaskManagement.Views.Task
             comboPriority.SelectedIndex = 0;
             comboCategory.ItemsSource = Enum.GetValues(typeof(Enums.Category));
             comboCategory.SelectedIndex = 0;
-            dateDeadline.Text = DateTime.Now.ToString("24.04.2023");
-            dateEndDate.Text = DateTime.Now.ToString("27.04.2023");
+            dateDeadline.Text = DateTime.Now.ToString();
+            dateEndDate.Text = DateTime.Now.ToString();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
