@@ -17,7 +17,11 @@
             <Label x:Name="tasksOverdue" Content="Tasks overdue: " HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top"/>
             <Label x:Name="tasksDone" Content="Tasks done: " HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top"/>
             <Label x:Name="tasksToBeDone" Content="Tasks to be done: " HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top"/>
-            
+            <Label Content="{Binding StatsVM.Stats.TasksDueTomorrow}" HorizontalAlignment="Left" Margin="132,36,0,0" VerticalAlignment="Top" Height="26" Width="22"/>
+            <Label Content="{Binding StatsVM.Stats.TasksOverdue}" HorizontalAlignment="Left" Margin="100,62,0,0" VerticalAlignment="Top" Height="26" Width="22"/>
+            <Label Content="{Binding StatsVM.Stats.TasksDone}" HorizontalAlignment="Left" Margin="84,88,0,0" VerticalAlignment="Top" Height="26" Width="22"/>
+            <Label Content="{Binding StatsVM.Stats.TasksToBeDone}" HorizontalAlignment="Left" Margin="115,114,0,0" VerticalAlignment="Top" Height="26" Width="22"/>
+
         </Grid>
     </Grid>
 </Page>

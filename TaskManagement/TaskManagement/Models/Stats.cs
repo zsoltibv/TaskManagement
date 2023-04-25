@@ -8,7 +8,7 @@ namespace TaskManagement.Models
 {
     public class Stats : BaseNotification
     {
-        private int _tasksDue = 1;
+        private int _tasksDue = 0;
         public int TasksDue
         {
             get { return _tasksDue; }
@@ -19,7 +19,7 @@ namespace TaskManagement.Models
             }
         }
 
-        private int _tasksDueTomorrow;
+        private int _tasksDueTomorrow = 0;
         public int TasksDueTomorrow
         {
             get { return _tasksDueTomorrow; }
@@ -30,7 +30,7 @@ namespace TaskManagement.Models
             }
         }
 
-        private int _tasksOverdue;
+        private int _tasksOverdue = 0;
         public int TasksOverdue
         {
             get { return _tasksOverdue; }
@@ -41,7 +41,7 @@ namespace TaskManagement.Models
             }
         }
 
-        private int _tasksDone;
+        private int _tasksDone = 0;
         public int TasksDone
         {
             get { return _tasksDone; }
@@ -52,7 +52,7 @@ namespace TaskManagement.Models
             }
         }
 
-        private int _tasksToBeDone;
+        private int _tasksToBeDone = 0;
         public int TasksToBeDone
         {
             get { return _tasksToBeDone; }
