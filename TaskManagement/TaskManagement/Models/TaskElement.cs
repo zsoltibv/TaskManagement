@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using TaskManagement.Models;
 
@@ -10,6 +11,9 @@ namespace TaskManagement.Models
 {
     public class TaskElement : BaseNotification
     {
+        private static int _idCounter = 0;
+        public int Id { get; private set; }
+
         private string _name = "";
         public string Name
         {
@@ -90,6 +94,7 @@ namespace TaskManagement.Models
 
         public TaskElement(string name, string description, Enums.Status status, Enums.Priority priority, DateTime deadline, DateTime endDate, Enums.Category category)
         {
+            Id = Interlocked.Increment(ref _idCounter);
             Name = name;
             Description = description;
             Status = status;

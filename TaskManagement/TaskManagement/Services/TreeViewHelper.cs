@@ -100,7 +100,7 @@ namespace TaskManagement.Services
             foreach (var innerList in items)
             {
 
-                objectToDelete = innerList.SubCollectionTask.FirstOrDefault(x => x.Name == task.Name);
+                objectToDelete = innerList.SubCollectionTask.FirstOrDefault(x => x.Id == task.Id);
 
                 if (objectToDelete != null)
                 {
@@ -111,7 +111,7 @@ namespace TaskManagement.Services
 
                 foreach (var innerList2 in innerList.SubCollectionTDL)
                 {
-                    objectToDelete = innerList2.SubCollectionTask.FirstOrDefault(x => x.Name == task.Name);
+                    objectToDelete = innerList2.SubCollectionTask.FirstOrDefault(x => x.Id == task.Id);
 
                     if (objectToDelete != null)
                     {
@@ -125,7 +125,7 @@ namespace TaskManagement.Services
 
         public void DeleteTdl(TreeViewElement element)
         {
-            TreeViewElement objectToDelete = items.FirstOrDefault(x => x.ItemName == element.ItemName);
+            TreeViewElement objectToDelete = items.FirstOrDefault(x => x.Id == element.Id);
 
             if (objectToDelete != null)
             {
@@ -136,7 +136,7 @@ namespace TaskManagement.Services
 
             foreach (var innerList in items)
             {
-                objectToDelete = innerList.SubCollectionTDL.FirstOrDefault(x => x.ItemName == element.ItemName);
+                objectToDelete = innerList.SubCollectionTDL.FirstOrDefault(x => x.Id == element.Id);
 
                 if (objectToDelete != null)
                 {
