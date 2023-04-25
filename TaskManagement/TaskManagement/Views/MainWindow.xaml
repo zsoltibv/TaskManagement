@@ -31,7 +31,7 @@
                 <MenuItem Header="Add" Command="{Binding TreeViewVM.AddTaskCommand}" CommandParameter="{Binding TreeViewVM.CurrentItem}"/>
                 <MenuItem Header="Edit"/>
                 <MenuItem Header="Delete" Command="{Binding TreeViewVM.DeleteTaskCommand}" CommandParameter="{Binding TreeViewVM.SelectedTask}"/>
-                <MenuItem Header="Set Done"/>
+                <MenuItem Header="Set Done" Command="{Binding TreeViewVM.SetDoneTaskCommand}" CommandParameter="{Binding TreeViewVM.SelectedTask}"/>
                 <MenuItem Header="Move Up" Command="{Binding TreeViewVM.MoveUpTaskCommand}" CommandParameter="{Binding TreeViewVM.SelectedTask}"/>
                 <MenuItem Header="Move Down" Command="{Binding TreeViewVM.MoveDownTaskCommand}" CommandParameter="{Binding TreeViewVM.SelectedTask}"/>
                 <MenuItem Header="Manage Category"/>

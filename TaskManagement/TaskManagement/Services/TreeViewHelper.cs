@@ -74,6 +74,11 @@ namespace TaskManagement.Services
             }
         }
 
+        public void SetDoneTask(TaskElement element)
+        {
+            element.Status = Enums.Status.Done;
+        }
+
         public void ShowAddTaskDialog(TreeViewElement element)
         {
             this.currentItem = element;

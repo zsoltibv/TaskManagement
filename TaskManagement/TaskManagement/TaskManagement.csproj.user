@@ -7,16 +7,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\Panels\StatisticsPanel.xaml.cs">
+    <Compile Update="Views\Dashboard\StatisticsPanel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Panels\TaskDescriptionPanel.xaml.cs">
+    <Compile Update="Views\Dashboard\TaskDescriptionPanel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Panels\TaskPanel.xaml.cs">
+    <Compile Update="Views\Dashboard\TaskPanel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Panels\TreeViewPanel.xaml.cs">
+    <Compile Update="Views\Dashboard\TreeViewPanel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Task\AddTask.xaml.cs">
@@ -33,16 +33,16 @@
     <Page Update="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Panels\StatisticsPanel.xaml">
+    <Page Update="Views\Dashboard\StatisticsPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Panels\TaskDescriptionPanel.xaml">
+    <Page Update="Views\Dashboard\TaskDescriptionPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Panels\TaskPanel.xaml">
+    <Page Update="Views\Dashboard\TaskPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Panels\TreeViewPanel.xaml">
+    <Page Update="Views\Dashboard\TreeViewPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Task\AddTask.xaml">

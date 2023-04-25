@@ -164,5 +164,17 @@ namespace TaskManagement.ViewModels
                 return _moveDownTaskCommand;
             }
         }
+        private ICommand _setDoneTaskCommand;
+        public ICommand SetDoneTaskCommand
+        {
+            get
+            {
+                if (_setDoneTaskCommand == null)
+                {
+                    _setDoneTaskCommand = new RelayCommand<TaskElement>(tdl.SetDoneTask);
+                }
+                return _setDoneTaskCommand;
+            }
+        }
     }
 }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\zsolti\Desktop\Facultate\An2\Semestrul2\MVP\Teme\TaskManagement\TaskManagement\TaskManagement\App.xaml
-8-179062444
+8-1711364414
 
-20-1295070576
+201440244546
 194101785492
-Views\MainWindow.xaml;Views\Panels\StatisticsPanel.xaml;Views\Panels\TaskDescriptionPanel.xaml;Views\Panels\TaskPanel.xaml;Views\Panels\TreeViewPanel.xaml;Views\Task\AddTask.xaml;Views\TDL\AddRootTDL.xaml;Views\TDL\AddSubTDL.xaml;
+Views\Dashboard\StatisticsPanel.xaml;Views\Dashboard\TaskDescriptionPanel.xaml;Views\Dashboard\TaskPanel.xaml;Views\Dashboard\TreeViewPanel.xaml;Views\MainWindow.xaml;Views\Task\AddTask.xaml;Views\TDL\AddRootTDL.xaml;Views\TDL\AddSubTDL.xaml;
 
 False
 
