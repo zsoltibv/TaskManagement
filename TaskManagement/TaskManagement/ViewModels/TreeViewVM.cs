@@ -113,5 +113,31 @@ namespace TaskManagement.ViewModels
                 return _deleteTDLCommand;
             }
         }
+
+        private ICommand _moveUpTDLCommand;
+        public ICommand MoveUpTDLCommand
+        {
+            get
+            {
+                if (_moveUpTDLCommand == null)
+                {
+                    _moveUpTDLCommand = new RelayCommand<TreeViewElement>(tdl.MoveUpTdl);
+                }
+                return _moveUpTDLCommand;
+            }
+        }
+
+        private ICommand _moveDownTDLCommand;
+        public ICommand MoveDownTDLCommand
+        {
+            get
+            {
+                if (_moveDownTDLCommand == null)
+                {
+                    _moveDownTDLCommand = new RelayCommand<TreeViewElement>(tdl.MoveDownTdl);
+                }
+                return _moveDownTDLCommand;
+            }
+        }
     }
 }

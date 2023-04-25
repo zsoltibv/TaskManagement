@@ -38,6 +38,24 @@ namespace TaskManagement.Services
             });
         }
 
+        public void MoveUpTdl(TreeViewElement element)
+        {
+            int index = items.IndexOf(element);
+            if (index - 1 >= 0)
+            {
+                items.Move(index, index - 1);
+            }
+        }
+
+        public void MoveDownTdl(TreeViewElement element)
+        {
+            int index = items.IndexOf(element);
+            if (index + 1 <= items.Count)
+            {
+                items.Move(index, index + 1);
+            }
+        }
+
         public void ShowAddTaskDialog(TreeViewElement element)
         {
             this.currentItem = element;
