@@ -56,6 +56,24 @@ namespace TaskManagement.Services
             }
         }
 
+        public void MoveUpTask(TaskElement element)
+        {
+            int index = currentItem.SubCollectionTask.IndexOf(element);
+            if (index - 1 >= 0)
+            {
+                currentItem.SubCollectionTask.Move(index, index - 1);
+            }
+        }
+
+        public void MoveDownTask(TaskElement element)
+        {
+            int index = currentItem.SubCollectionTask.IndexOf(element);
+            if (index + 1 <= currentItem.SubCollectionTask.Count)
+            {
+                currentItem.SubCollectionTask.Move(index, index + 1);
+            }
+        }
+
         public void ShowAddTaskDialog(TreeViewElement element)
         {
             this.currentItem = element;
