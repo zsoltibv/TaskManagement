@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\zsolti\Desktop\Facultate\An2\Semestrul2\MVP\Teme\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\
+V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\obj\Debug\net6.0-windows\
 TaskManagement
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\zsolti\Desktop\Facultate\An2\Semestrul2\MVP\Teme\TaskManagement\TaskManagement\TaskManagement\App.xaml
-8-1711364414
+V:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\App.xaml
+10-138611396
 
-21677471055
+24-1834180402
 194101785492
-Views\Dashboard\StatisticsPanel.xaml;Views\Dashboard\TaskDescriptionPanel.xaml;Views\Dashboard\TaskPanel.xaml;Views\Dashboard\TreeViewPanel.xaml;Views\MainWindow.xaml;Views\Task\AddTask.xaml;Views\TDL\AddRootTDL.xaml;Views\TDL\AddSubTDL.xaml;
+Views\About\About.xaml;Views\Dashboard\StatisticsPanel.xaml;Views\Dashboard\TaskDescriptionPanel.xaml;Views\Dashboard\TaskPanel.xaml;Views\Dashboard\TreeViewPanel.xaml;Views\DB\OpenDB.xaml;Views\MainWindow.xaml;Views\Task\AddTask.xaml;Views\TDL\AddRootTDL.xaml;Views\TDL\AddSubTDL.xaml;
 
 False
 

@@ -1,11 +1,13 @@
 ﻿
 
-FC:\Users\zsolti\Desktop\Facultate\An2\Semestrul2\MVP\Teme\TaskManagement\TaskManagement\TaskManagement\Views\MainWindow.xaml;;
-FC:\Users\zsolti\Desktop\Facultate\An2\Semestrul2\MVP\Teme\TaskManagement\TaskManagement\TaskManagement\Views\Task\AddTask.xaml;;
-FC:\Users\zsolti\Desktop\Facultate\An2\Semestrul2\MVP\Teme\TaskManagement\TaskManagement\TaskManagement\Views\TDL\AddRootTDL.xaml;;
-FC:\Users\zsolti\Desktop\Facultate\An2\Semestrul2\MVP\Teme\TaskManagement\TaskManagement\TaskManagement\Views\TDL\AddSubTDL.xaml;;
-FC:\Users\zsolti\Desktop\Facultate\An2\Semestrul2\MVP\Teme\TaskManagement\TaskManagement\TaskManagement\Views\Dashboard\StatisticsPanel.xaml;;
-FC:\Users\zsolti\Desktop\Facultate\An2\Semestrul2\MVP\Teme\TaskManagement\TaskManagement\TaskManagement\Views\Dashboard\TaskDescriptionPanel.xaml;;
-FC:\Users\zsolti\Desktop\Facultate\An2\Semestrul2\MVP\Teme\TaskManagement\TaskManagement\TaskManagement\Views\Dashboard\TaskPanel.xaml;;
-FC:\Users\zsolti\Desktop\Facultate\An2\Semestrul2\MVP\Teme\TaskManagement\TaskManagement\TaskManagement\Views\Dashboard\TreeViewPanel.xaml;;
+FV:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\Views\About\About.xaml;;
+FV:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\Views\Dashboard\StatisticsPanel.xaml;;
+FV:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\Views\Dashboard\TaskDescriptionPanel.xaml;;
+FV:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\Views\Dashboard\TaskPanel.xaml;;
+FV:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\Views\Dashboard\TreeViewPanel.xaml;;
+FV:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\Views\DB\OpenDB.xaml;;
+FV:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\Views\MainWindow.xaml;;
+FV:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\Views\Task\AddTask.xaml;;
+FV:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\Views\TDL\AddRootTDL.xaml;;
+FV:\Facultate\An2\Semestrul2\MVP\TaskManagement\TaskManagement\TaskManagement\Views\TDL\AddSubTDL.xaml;;
 

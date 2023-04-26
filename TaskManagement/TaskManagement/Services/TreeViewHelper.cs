@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using TaskManagement.Models;
 using TaskManagement.Views.TDL;
 using TaskManagement.Views.Task;
+using TaskManagement.Views.About;
 using static TaskManagement.Models.Enums;
 using System.Windows;
 using TaskManagement.ViewModels;
@@ -186,6 +187,12 @@ namespace TaskManagement.Services
                     break;
                 }
             }
+        }
+
+        public void About(TaskElement element)
+        {
+            About about = new About();
+            about.ShowDialog();
         }
     }
 }

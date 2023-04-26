@@ -16,6 +16,8 @@ namespace TaskManagement.ViewModels
     public class TreeViewVM : BaseNotification
     {
         public TreeViewHelper tdl;
+        public DBHelper dbHelper;
+
         private TaskElement _selectedTask;
         public TaskElement SelectedTask
         {
@@ -48,6 +50,7 @@ namespace TaskManagement.ViewModels
         {
             ItemsCollection = new ObservableCollection<TreeViewElement>();
             tdl = new TreeViewHelper(ItemsCollection);
+            dbHelper = new DBHelper(ItemsCollection);
         }
 
         private ICommand _addRootTDLCommand;
@@ -174,6 +177,42 @@ namespace TaskManagement.ViewModels
                     _setDoneTaskCommand = new RelayCommand<TaskElement>(tdl.SetDoneTask);
                 }
                 return _setDoneTaskCommand;
+            }
+        }
+        private ICommand _aboutCommand;
+        public ICommand AboutCommand
+        {
+            get
+            {
+                if (_aboutCommand == null)
+                {
+                    _aboutCommand = new RelayCommand<TaskElement>(tdl.About);
+                }
+                return _aboutCommand;
+            }
+        }
+        private ICommand _addToDB;
+        public ICommand AddToDB
+        {
+            get
+            {
+                if (_addToDB == null)
+                {
+                    _addToDB = new RelayCommand<TreeViewElement>(dbHelper.SaveToDB);
+                }
+                return _addToDB;
+            }
+        }
+        private ICommand _openDB;
+        public ICommand OpenDB
+        {
+            get
+            {
+                if (_openDB == null)
+                {
+                    _openDB = new RelayCommand<TreeViewElement>(dbHelper.OpenDB);
+                }
+                return _openDB;
             }
         }
     }

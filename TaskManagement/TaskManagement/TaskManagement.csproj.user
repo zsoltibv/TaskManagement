@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\About\About.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Dashboard\StatisticsPanel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -17,6 +20,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Dashboard\TreeViewPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DB\OpenDB.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Task\AddTask.xaml.cs">
@@ -30,6 +36,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\About\About.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DB\OpenDB.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>

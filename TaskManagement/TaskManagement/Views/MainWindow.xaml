@@ -12,8 +12,8 @@
     <Grid Background="#d4d4d8">
         <Menu>
             <MenuItem Header="File">
-                <MenuItem Header="Open Database"/>
-                <MenuItem Header="New Database"/>
+                <MenuItem Header="Open Database" Command="{Binding TreeViewVM.OpenDB}"/>
+                <MenuItem Header="New Database" Command="{Binding TreeViewVM.AddToDB}"/>
                 <MenuItem Header="Archive Database"/>
                 <Separator/>
                 <MenuItem Header="Exit"/>
@@ -43,7 +43,7 @@
                 <MenuItem Header="Statistics"/>
             </MenuItem>
             <MenuItem Header="Help">
-                <MenuItem Header="About"/>
+                <MenuItem Header="About" Command="{Binding TreeViewVM.AboutCommand}"/>
             </MenuItem>
         </Menu>
         <Frame x:Name="Panel1" Source="Panels\TaskPanel.xaml" Margin="263,24,10,362" Navigated="Frame_Navigated_1"/>
