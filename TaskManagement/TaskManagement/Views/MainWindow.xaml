@@ -38,7 +38,8 @@
                 <MenuItem Header="Find Task"/>
             </MenuItem>
             <MenuItem Header="View">
-                <MenuItem Header="Sort"/>
+                <MenuItem Header="Sort By Deadline" Command="{Binding TreeViewVM.SortDeadline}" CommandParameter="{Binding TreeViewVM.CurrentItem}"/>
+                <MenuItem Header="Sort By Priority" Command="{Binding TreeViewVM.SortPriority}" CommandParameter="{Binding TreeViewVM.CurrentItem}"/>
                 <MenuItem Header="Filter"/>
                 <MenuItem Header="Statistics"/>
             </MenuItem>

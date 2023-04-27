@@ -8,33 +8,49 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using TaskManagement.Models;
 using TaskManagement.Views.DB;
 
 namespace TaskManagement.Services
 {
-    public class DBHelper
+    public class DBHelper : BaseNotification
     {
         static string _saveFilePath = "../../../Data/DB/";
         public ObservableCollection<TreeViewElement> items { get; set; }
+         public ObservableCollection<TreeViewElement> Items
+
+        {
+            get { return items; }
+            set
+            {
+                items = value;
+                NotifyPropertyChanged("Items");
+            }
+        }
         public DBHelper(ObservableCollection<TreeViewElement> items)
         {
-            this.items = items;
+            Items = items;
         }
 
         public void SaveToDB(TreeViewElement element)
         {
             string input = Microsoft.VisualBasic.Interaction.InputBox("Enter some text", "Input Box");
             string filePath = _saveFilePath + input + ".json";
-            string jsonString = JsonSerializer.Serialize(items);
+            string jsonString = JsonSerializer.Serialize(Items);
             File.AppendAllText(filePath, jsonString);
         }
 
         public void LoadFromDB(string fileName)
         {
             string jsonString = File.ReadAllText(_saveFilePath + fileName);
-            MessageBox.Show(jsonString);
-            items = JsonSerializer.Deserialize<ObservableCollection<TreeViewElement>>(jsonString);
+            //MessageBox.Show(jsonString);
+            var list = JsonSerializer.Deserialize<ObservableCollection<TreeViewElement>>(jsonString).ToList();
+            foreach (var item in list)
+            {
+                Items.Add(item);
+            }
+          
         }
 
         public static List<string> GetSavedFiles()

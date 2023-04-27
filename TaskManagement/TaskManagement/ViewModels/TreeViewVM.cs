@@ -53,7 +53,9 @@ namespace TaskManagement.ViewModels
             ItemsCollection = new ObservableCollection<TreeViewElement>();
             tdl = new TreeViewHelper(ItemsCollection, tdlVM);
             dbHelper = new DBHelper(ItemsCollection);
+           
         }
+
 
         private ICommand _addRootTDLCommand;
         public ICommand AddRootTDLCommand
@@ -215,6 +217,30 @@ namespace TaskManagement.ViewModels
                     _openDB = new RelayCommand<TreeViewElement>(dbHelper.OpenDB);
                 }
                 return _openDB;
+            }
+        }
+        private ICommand _sortDeadline;
+        public ICommand SortDeadline
+        {
+            get
+            {
+                if (_sortDeadline == null)
+                {
+                    _sortDeadline = new RelayCommand<TreeViewElement>(tdl.SortDeadline);
+                }
+                return _sortDeadline;
+            }
+        }
+        private ICommand _sortPriority;
+        public ICommand SortPriority
+        {
+            get
+            {
+                if (_sortPriority == null)
+                {
+                    _sortPriority = new RelayCommand<TreeViewElement>(tdl.SortPriority);
+                }
+                return _sortPriority;
             }
         }
     }

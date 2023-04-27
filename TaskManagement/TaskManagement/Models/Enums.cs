@@ -17,9 +17,9 @@ namespace TaskManagement.Models
 
         public enum Priority
         {
-            High,
+            Low,
             Medium,
-            Low
+            High
         }
 
         public enum Category

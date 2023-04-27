@@ -12,6 +12,7 @@ using static TaskManagement.Models.Enums;
 using System.Windows;
 using TaskManagement.ViewModels;
 using System.Xml.Linq;
+using System.Windows.Documents;
 
 namespace TaskManagement.Services
 {
@@ -198,6 +199,28 @@ namespace TaskManagement.Services
         {
             About about = new About();
             about.ShowDialog();
+        }
+
+        public void SortDeadline(TreeViewElement element)
+        {
+            this.currentItem = element;
+            var list = currentItem.SubCollectionTask.OrderBy(x => x.Deadline).ToList();
+            currentItem.SubCollectionTask.Clear();
+            foreach (var item in list)
+            {
+                currentItem.SubCollectionTask.Add(item);
+            }
+        }
+
+        public void SortPriority(TreeViewElement element)
+        {
+            this.currentItem = element;
+            var list = currentItem.SubCollectionTask.OrderBy(x => x.Priority).ToList();
+            currentItem.SubCollectionTask.Clear();
+            foreach (var item in list)
+            {
+                currentItem.SubCollectionTask.Add(item);
+            }
         }
     }
 }
