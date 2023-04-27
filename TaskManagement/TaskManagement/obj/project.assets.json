@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "V:\\Facultate\\An2\\Semestrul2\\MVP\\TaskManagement\\TaskManagement\\TaskManagement\\TaskManagement.csproj",
+      "projectUniqueName": "C:\\Users\\zsolti\\Desktop\\Facultate\\An2\\Semestrul2\\MVP\\Teme\\TaskManagement\\TaskManagement\\TaskManagement\\TaskManagement.csproj",
       "projectName": "TaskManagement",
-      "projectPath": "V:\\Facultate\\An2\\Semestrul2\\MVP\\TaskManagement\\TaskManagement\\TaskManagement\\TaskManagement.csproj",
+      "projectPath": "C:\\Users\\zsolti\\Desktop\\Facultate\\An2\\Semestrul2\\MVP\\Teme\\TaskManagement\\TaskManagement\\TaskManagement\\TaskManagement.csproj",
       "packagesPath": "C:\\Users\\zsolti\\.nuget\\packages\\",
-      "outputPath": "V:\\Facultate\\An2\\Semestrul2\\MVP\\TaskManagement\\TaskManagement\\TaskManagement\\obj\\",
+      "outputPath": "C:\\Users\\zsolti\\Desktop\\Facultate\\An2\\Semestrul2\\MVP\\Teme\\TaskManagement\\TaskManagement\\TaskManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zsolti\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -64,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

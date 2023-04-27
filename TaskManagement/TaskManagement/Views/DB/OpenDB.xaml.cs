@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,11 +24,13 @@ namespace TaskManagement.Views.DB
     /// </summary>
     public partial class OpenDB : Window
     {
+        DBHelper dbHelper;
         public ObservableCollection<string> Databases { get; set; }
         private string SelectedItem { get; set; }
-        public OpenDB()
+        public OpenDB(DBHelper helper)
         {
             InitializeComponent();
+            dbHelper = helper;
             Databases = new ObservableCollection<string>(DBHelper.GetSavedFiles());
             this.DataContext = this;
         }
@@ -41,7 +44,8 @@ namespace TaskManagement.Views.DB
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            dbHelper.LoadFromDB(SelectedItem);
+            this.Close();
         }
     }
 }

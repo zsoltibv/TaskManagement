@@ -15,6 +15,7 @@ namespace TaskManagement.ViewModels
 {
     public class TreeViewVM : BaseNotification
     {
+        public ToDoListVM tdlVM;
         public TreeViewHelper tdl;
         public DBHelper dbHelper;
 
@@ -46,10 +47,11 @@ namespace TaskManagement.ViewModels
         }
         public ObservableCollection<TreeViewElement> ItemsCollection { get; set; }
 
-        public TreeViewVM()
+        public TreeViewVM(ToDoListVM tdlVM)
         {
+            this.tdlVM = tdlVM;
             ItemsCollection = new ObservableCollection<TreeViewElement>();
-            tdl = new TreeViewHelper(ItemsCollection);
+            tdl = new TreeViewHelper(ItemsCollection, tdlVM);
             dbHelper = new DBHelper(ItemsCollection);
         }
 

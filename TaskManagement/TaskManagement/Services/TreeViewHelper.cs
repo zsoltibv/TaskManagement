@@ -17,11 +17,13 @@ namespace TaskManagement.Services
 {
     public class TreeViewHelper
     {
+        ToDoListVM tdlVM;
         private ObservableCollection<TreeViewElement> items { get; set; }
         private TreeViewElement currentItem;
 
-        public TreeViewHelper(ObservableCollection<TreeViewElement> items)
+        public TreeViewHelper(ObservableCollection<TreeViewElement> items, ToDoListVM tdlVM)
         {
+            this.tdlVM = tdlVM;
             this.items = items;
         }
 
@@ -78,6 +80,7 @@ namespace TaskManagement.Services
         public void SetDoneTask(TaskElement element)
         {
             element.Status = Enums.Status.Done;
+            tdlVM.StatsVM.UpdateStats();
         }
 
         public void ShowAddTaskDialog(TreeViewElement element)
@@ -107,6 +110,7 @@ namespace TaskManagement.Services
                     currentItem.SubCollectionTask.Add(new TaskElement(name, description, status, priority, deadLine, endDate, category));
                 }
             }
+            tdlVM.StatsVM.UpdateStats();
         }
 
         public void ShowAddSubTdlDialog(TreeViewElement element)
@@ -163,6 +167,7 @@ namespace TaskManagement.Services
                     }
                 }
             }
+            tdlVM.StatsVM.UpdateStats();
         }
 
         public void DeleteTdl(TreeViewElement element)

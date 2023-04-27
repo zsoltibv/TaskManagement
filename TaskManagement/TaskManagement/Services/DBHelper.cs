@@ -16,7 +16,7 @@ namespace TaskManagement.Services
     public class DBHelper
     {
         static string _saveFilePath = "../../../Data/DB/";
-        private ObservableCollection<TreeViewElement> items { get; set; }
+        public ObservableCollection<TreeViewElement> items { get; set; }
         public DBHelper(ObservableCollection<TreeViewElement> items)
         {
             this.items = items;
@@ -30,9 +30,10 @@ namespace TaskManagement.Services
             File.AppendAllText(filePath, jsonString);
         }
 
-        public void LoadFromDB(string filePath)
+        public void LoadFromDB(string fileName)
         {
-            string jsonString = File.ReadAllText(filePath);
+            string jsonString = File.ReadAllText(_saveFilePath + fileName);
+            MessageBox.Show(jsonString);
             items = JsonSerializer.Deserialize<ObservableCollection<TreeViewElement>>(jsonString);
         }
 
@@ -50,7 +51,7 @@ namespace TaskManagement.Services
 
         public void OpenDB(TreeViewElement element)
         {
-            OpenDB openDB = new OpenDB();   
+            OpenDB openDB = new OpenDB(this);   
             openDB.ShowDialog();
         }
     }

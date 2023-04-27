@@ -21,8 +21,8 @@ namespace TaskManagement.ViewModels
         
         public ToDoListVM()
         {
-            TreeViewVM = new TreeViewVM();
-            StatsVM = new StatsVM();
+            TreeViewVM = new TreeViewVM(this);
+            StatsVM = new StatsVM(TreeViewVM.ItemsCollection);
         }
     }
 }
